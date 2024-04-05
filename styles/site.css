@@ -1,0 +1,216 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
+
+body {
+    font-family: 'Reddit Mono', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+  }
+
+header{
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Reddit Mono', sans-serif;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: white;
+}
+
+nav h1 {
+    color: black;
+}
+  
+nav a {
+    color: black;
+    transition: blue;
+}
+
+nav a:hover {
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: bold;
+}
+
+.hero {
+    font-family: 'Permanent Marker', sans-serif;
+    color: black;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+
+.hero img {
+  height: 20.75rem;
+  width: 100%;
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    padding:20px;
+}
+
+.works {
+    background-color: white;
+    padding: 0px 0;
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+
+  }
+  
+  .work-pic {
+    width: 65%;
+    height: 20%;
+  }
+  
+  .works-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .works-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .work-container {
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+  }
+  
+  .work-container p {
+    padding: 0.4rem;
+  }
+  
+  .work-title {
+    margin-bottom: 1rem;
+  }
+  
+  .work-details {
+    margin-bottom: 1rem;
+    font-size: 8pt;
+  }
+
+  .work-card {
+    background-color: white;
+    border-radius: 0px;
+    border-style:solid;
+    padding: 20px;
+    margin: 10px;
+  }
+
+
+
+footer{
+    background-color: black;
+    color:white;
+    padding: 1.25rem;
+    text-align: center;
+    margin: 2rem 0 0;
+}
+
+
+footer a {
+    font-family: 'Reddit Mono', sans-serif;
+    color: white; 
+    text-decoration: none;
+    font-size: small;
+    padding:5px;
+}
+
+
+@media screen and (max-width: 720px) {
+    nav {
+        padding: 1.5rem 1rem;
+      }
+
+        
+    .hero {
+        margin-top: -4rem;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero img {
+            height: 37.5rem;
+            width: 30rem;
+        }
+
+    .bio {
+        margin-top: -7rem;
+        width: 20.5rem;
+    }
+
+    .works-container {
+        flex-direction: column;
+      }
+    
+      .work-container {
+        width: 20.875rem;
+      }
+  }
+
+  @media screen and (max-width: 420px) {
+    .hero img {
+      height: 37.5rem;
+      width: 23rem;
+    }
+  
+    .work-container {
+      width: 17.875rem;
+    }
+  } 
