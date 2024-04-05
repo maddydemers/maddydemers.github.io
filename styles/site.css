@@ -87,7 +87,7 @@ nav ul li {
   padding-bottom:30px;
 }
 
-button{
+.button-tbd{
   cursor: pointer;
   border:none;
   text-decoration:none;
@@ -99,7 +99,7 @@ button{
   font-size:10pt;
 }
 
-button img{
+.button-tbd img{
   width: 2rem;
   height: 2.5rem;
 }
