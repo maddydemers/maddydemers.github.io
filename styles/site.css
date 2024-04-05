@@ -84,7 +84,7 @@ nav ul li {
 .welcome-text{
   text-align:center;
   padding-top:30px;
-  padding-bottom:30px;
+  padding-bottom:40px;
 }
 
 .button-tbd{
@@ -100,8 +100,8 @@ nav ul li {
 }
 
 .button-tbd img{
-  width: 2rem;
-  height: 2.5rem;
+  width: 20px;
+  height: 20px;
 }
 
 .hero {
