@@ -1,1 +1,1 @@
-Please visit https://maddydemers.github.io/site/ to see my personal site.
+Please visit https://maddydemers.github.io to see my personal site.
