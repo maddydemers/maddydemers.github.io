@@ -230,10 +230,13 @@ iframe{
 #map {
     height:auto;
     min-height:600px;
-    min-width:900px;
+    min-width:300px;
     width: 100%;
 }
 
+.map{
+  padding:0px 100px;
+}
 
 footer{
     background-color: black;
@@ -303,6 +306,13 @@ footer a:hover{
       height: 37.5rem;
       width: 23rem;
     }
+
+    #map {
+      height:auto;
+      min-height:600px;
+      min-width:300px;
+      width: 100%;
+  }
   
     .work-container {
       width: 17.875rem;
