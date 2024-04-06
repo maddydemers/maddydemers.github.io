@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="public/images/mountain.png">
+
+
+  <link rel="stylesheet" type="text/css" href="styles/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
+
+  <title>Madeline Demers</title>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>MADELINE DEMERS</h1>
+      <ul class="navigation">
+        <li><a href="index.html#works" class="nav-link">Work</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="about-text">
+        <h2>Interactive Acitvity Map</h2>
+        <h4>Personal Project</h4>
+        <p id="map-id">Click on a marker to zoom in and view information about an activity. <a href="strava.html#map-id">Return to original zoom state</a>.</p>
+    </section>
+      
+        <section class="map">
+          <div id="map"></div>
+        </section>
+      <section class="about-text">
+        <p>Thanks to the generous support of <a href="https://developers.strava.com/">Strava's API</a>, I was able to compile my 
+          extensive personal activity upload history on the platform, totaling over 1,000 activities. 
+          Leveraging integrations with <a href="https://leafletjs.com/">Leaflet</a> and <a href="https://www.openstreetmap.org/#map=4/38.01/-95.84">OpenStreetMap</a>, I have constructed a visualization 
+          showcasing all the locations worldwide where I have logged a Strava activity*. This project epitomizes 
+          my enthusiasm for both movement and travel. I eagerly anticipate updating the map with my ventures to 
+          new destinations in 2025! Please visit my <a href="https://github.com/maddydemers">GitHub</a> to see the code I developed to build this map.</p>
+      </section>
+    <section class="ps">
+      <p>*For privacy reasons, I decided against real-time updates during the initial design process.</p>
+    </section>
+    <script src=public/scripts/map.js></script>
+  </main>
+  <footer>
+    <div class="footer-name">
+      <p><a href=index.html>Madeline Demers</a></p>
+    </div>
+    <div class="footer-links">
+      <p><a href="https://www.linkedin.com/in/madeline-demers">LinkedIn</a> / <a href="mailto:mkd79@cornell.edu">Email</a> / <a href="https://github.com/maddydemers">GitHub</a></p>
+    </div>
+  </footer>
+</body>
+
+
+</html>
