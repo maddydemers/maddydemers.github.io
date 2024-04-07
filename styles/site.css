@@ -41,10 +41,15 @@ h1 {
 h2{
   font-family: 'Averia Serif Libre', sans-serif;
   font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .about-text h2{
   margin-bottom:0;
+}
+
+.about a{
+  color:blue;
 }
 
 h4{
@@ -52,7 +57,7 @@ h4{
   font-style:italic;
   font-size: 12pt;
   margin-top:10px;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 nav{
@@ -93,7 +98,7 @@ nav ul li {
 .welcome-text{
   text-align:center;
   padding-top:30px;
-  padding-bottom:40px;
+  padding-bottom:50px;
 }
 
 button {
@@ -112,25 +117,28 @@ button {
 .button-scroll-down img{
   width: 20px;
   height: 20px;
+  padding-bottom:100px;
 }
 
 .hero {
-    font-family: 'Permanent Marker', sans-serif;
-    color: black;
-    font-size: xx-large;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center bottom;
     gap: 2.5rem;
     max-width: 100%;
     margin: auto;
     padding-bottom:0px;
     margin-bottom:0px;
+    object-fit: fill;
+    object-position: top;
+
 }
 
 .hero img {
   height: 20.75rem;
   width: 100%;
+  object-position:top; 
+
 }
 
 .about{
@@ -163,9 +171,9 @@ iframe{
   }
   
   .work-pic {
-    width: 75px; /* Adjust the width as needed */
-    height: 75px; /* Adjust the height as needed */
-    object-fit: cover; /* This property ensures that the image covers the entire container */
+    width: 75px; 
+    height: 75px; 
+    object-fit: cover; 
   }
   
   .works-container {
@@ -234,6 +242,10 @@ iframe{
     width: 100%;
 }
 
+#map-id p{
+  margin:0;
+}
+
 .map{
   padding:0px 100px;
 }
@@ -277,19 +289,35 @@ footer a:hover{
 
         
     .hero {
-        margin-top: -4rem;
+        /* margin-top: -4rem; */
         flex-direction: column;
         gap: 0;
+        padding:0ps;
     }
+
+    .welcome-text{
+      margin-top:0;
+      padding:0px 5px;
+    }
+    
+    .scroll-down{
+      padding:0;
+      margin-bottom:5px;
+    }
+
 
     section {
       max-width: 600px;
       margin: auto;
-  }
+      padding: 0px 20px;
+    }
 
     .hero img {
-            height: 37.5rem;
-            width: 30rem;
+            height: 50%;
+            width: 100%;
+            image-rendering:optimizeQuality;
+            object-fit: contain; 
+            object-position: top; 
         }
 
     .works-container {
@@ -303,8 +331,7 @@ footer a:hover{
 
   @media screen and (max-width: 420px) {
     .hero img {
-      height: 37.5rem;
-      width: 23rem;
+      display:none;
     }
 
     #map {
