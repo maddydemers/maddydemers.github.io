@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="icon" type="image/png" href="running-man.png">
+  
+    <link rel="stylesheet" type="text/css" href="styles/baxter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
+  
+    <title>Baxter in Boston</title>
+</head>
+<body>
+    <main>
+    <div id="loading-scene">
+        <div class="loading-text"></div>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loading-progress">
+            </div>
+        </div>
+    </div>
+
+    <div id="welcome-scene">
+
+        <!--TODO: Add Sources: https://www.runnersworld.com/races-places/a33917345/boston-marathon-2021-registration-postponed/ -->
+        <div class="finish">
+            <div class="race-logo"><img src="logo.png"></div>
+            <img src="race.png" alt="Finish Line Image">
+        </div>
+        <button id="start-btn">Start</button>
+
+
+    </div>
+
+    <div class="scene padded" id="scene1">
+        <div class="text">
+        <h2>The Training Cycle</h2>
+        <p>This is the first scene. Since January 1 of this year, you have trained for the race of a lifetime! 
+            Let's see how your hard work has stacked up over time.</p>
+        <p>
+            TODO: Add graphs and images
+        </p>
+    </div>
+        
+        <button class="next-btn" data-next="scene2">Next</button>
+    </div>
+
+    <div class="scene padded" id="scene2">
+        <h2>Adventure of a Lifetime</h2>
+        <p>This is the second scene. Alright we know the official training cycle started on January 1st, but we also know you have been training much longer for this awesome adventure! Already having completed the Paris Marathon in 2022 and the 
+            Cheap Marathon in 2023, you are a veteran of the distance (plus as they say third times a charm!). Nevermind all of the triaining you've built up your entire life. Unfortunately we don't have your data from TBall or soccer, but since you
+            downloaded Strava in 2017, we can see all that you have logged through the platform and shared with friends and family, taking you to new places all across the globe. Check it out!</p>
+            <p>
+                TODO: Add graphs and images and MAP
+            </p>
+        
+        <button class="next-btn" data-next="scene3">Next</button>
+    </div>
+
+    <div class="scene padded" id="scene3">
+        <h2>Scene 3</h2>
+        <p>This is the third scene.At (give or take) 26.2ish years old
+            and having grown up 26.2ish miles you will be running 26.2 (hopefully not "ish") miles to the finish line of the Boston Marathon!</p>
+            <p>
+                TODO: Add graphs and images
+            </p>
+        <button class="next-btn" data-next="scene4">Next</button>
+    </div>
+
+    <div class="scene padded" id="scene4">
+        <h2>Third Time's A Charm</h2>
+        <p>This is the 4 scene.At (give or take) 26.2ish years old
+            and having grown up 26.2ish miles you will be running 26.2 (hopefully not "ish") miles to the finish line of the Boston Marathon!</p>
+            <p>
+                TODO: Add graphs and images
+            </p>
+            <div class="paris-marathon">
+                <div class="paris">
+                    <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="6924432762" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
+                </div>
+                <div class="cheap">
+                    <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="8901771100" data-style="standard"></div><script src="https://strava-embeds.com/embed.js"></script>
+                </div>
+            </div>
+        <button class="next-btn" data-next="scene5">Next</button>
+    </div>
+    
+    <div class="scene padded" id="scene5">
+        <h2>Scene 5</h2>
+        <p>This is the fourth scene.At (give or take) 26.2ish years old
+            and having grown up 26.2ish miles you will be running 26.2 (hopefully not "ish") miles to the finish line of the Boston Marathon!</p>
+            <p>
+                TODO: Add graphs and images
+            </p>
+        <button class="next-btn" id="restart-btn">Start Over</button>
+    </div>
+</main>
+
+    <script src=public/scripts/baxter.js></script>
+</body>
+</html>

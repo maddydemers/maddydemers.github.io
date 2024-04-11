@@ -1,4 +1,11 @@
 
+.custom-cluster-icon{
+  background-color: blue; /* Change the background color to blue */
+  color: white; /* Change the text color to white */
+  border-color: blue; /* Change the border color to blue */
+}
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -277,6 +284,18 @@ footer{
 footer a:hover{
   color:blue;
   cursor: pointer;
+}
+
+.work-in-progress-banner {
+  background-color: #ffc107; 
+  color: black; 
+  padding: 5px; 
+  font-size:smaller;
+  text-align: center;
+}
+
+.work-in-progress-banner p {
+  margin: 0; 
 }
 
 

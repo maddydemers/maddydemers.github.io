@@ -1,0 +1,184 @@
+
+html{
+    margin:0;
+    padding:0;
+}
+
+main {
+    font-family: 'Reddit Mono', 'Arial', sans-serif;
+    display: flex;
+    flex-direction:column;
+    background-color:white;
+    height: 100vh;
+    margin:0; 
+}
+
+.padded{
+    margin:20px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.padded p{
+    font-size:small;
+}
+
+#loading-scene {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#welcome-scene,
+.scene {
+    display: none;
+    text-align: center;
+    font-size: large;
+    font-family: 'Averia Serif Libre', sans-serif;
+    
+}
+
+#welcome-scene{
+    position: relative; 
+}
+
+
+.next-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loading-text {
+    font-family: monospace;
+    font-size: 20px;
+    color: black;
+    padding-bottom:20px;
+
+}
+
+.loading-bar {
+    display: inline-block;
+    width: 200px;
+    height: 20px;
+    border: 3px solid #1e3cb8;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.loading-progress {
+    width: 0;
+    height: 100%;
+    background-color: #f0d513;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* @keyframes textAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}  */
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #start-btn {
+    animation: pulse 1.5s infinite alternate;
+  }
+
+.animated-text {
+    animation: textAnimation 3s forwards;
+    color: #1e3cb8;
+}
+
+#start-btn{
+    font-size:larger;
+}
+
+.finish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px;
+}
+
+.finish img {
+    max-width: 100%;
+    max-height:60vh; 
+}
+
+.race-logo img{
+    max-width: 70vh;
+}
+
+
+.next-btn, #start-btn {
+    padding: 10px 20px;
+    font-size: larger;
+    cursor: pointer;
+    background-color: #1e3cb8; 
+    border: 2px solid #1e3cb8; 
+    color: #f0d513; 
+    border-radius: 5px;
+    font-family: 'Averia Serif Libre', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+.next-btn:hover, #start-btn:hover {
+    background-color: #f0d513; 
+    color: #1e3cb8; 
+}
+
+.paris-marathon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right:20px;
+}
+
+.paris{
+    padding-right:20px;
+}
+
+@media screen and (max-width: 500px) {
+    main{
+        margin:10px;
+    }
+
+    .paris-marathon{
+        flex-direction:column;    
+        padding-right:0px;
+
+    }
+
+    .finish button{
+        top: 30%;
+        left:40%;
+    }
+
+    .paris{
+        padding-bottom:10px;
+        padding-right:0px;
+    }
+
+  } 
