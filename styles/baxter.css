@@ -1,7 +1,7 @@
 
 html{
     margin:0;
-    padding:0;
+    padding:0 100px;
 }
 
 main {
@@ -15,12 +15,23 @@ main {
 
 .padded{
     margin:20px;
-    padding-left:10px;
-    padding-right:10px;
+}
+
+.padded h2{
+    text-align:left;
+    padding-left:20px;
+    padding-right:20px;
+    margin:10px;
+    font-size:32pt;
 }
 
 .padded p{
-    font-size:small;
+    font-size:normal;
+    text-align:left;
+    padding-left:20px;
+    padding-right:20px;
+    margin:10px;
+
 }
 
 #loading-scene {
@@ -99,7 +110,7 @@ main {
     }
   }
   
-  #start-btn {
+  #start-btn, #motivation {
     animation: pulse 1.5s infinite alternate;
   }
 
@@ -117,6 +128,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding:10px;
+    margin-top:20px;
 }
 
 .finish img {
@@ -126,10 +138,66 @@ main {
 
 .race-logo img{
     max-width: 70vh;
+    padding-bottom:20px;
 }
 
+#motivation a{
+    text-decoration: none;
+    color:white;
+}
 
-.next-btn, #start-btn {
+.center p{
+    text-align: center;
+    align-content: center;
+    font-weight:bold;
+}
+
+.center h2{
+    text-align: center;
+    align-content: center;
+    font-weight:bold;
+}
+
+h3{
+    font-size:larger;
+    font-weight:bolder;
+    padding:0;
+    margin:0;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 300px;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay-image {
+    position: absolute;
+    top: 100px; 
+    left: 400px;
+    z-index: 1; 
+    animation: slideAnimation 3s forwards; 
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50px) ; 
+    }
+  }
+
+
+.next-btn, #start-btn, #motivation {
     padding: 10px 20px;
     font-size: larger;
     cursor: pointer;
@@ -143,7 +211,7 @@ main {
     margin-top:20px;
 }
 
-.next-btn:hover, #start-btn:hover {
+.next-btn:hover, #start-btn:hover, #motivation:hover{
     background-color: #f0d513; 
     color: #1e3cb8; 
 }
@@ -160,10 +228,37 @@ main {
     padding-right:20px;
 }
 
+.hidden{
+    display:none;
+}
+
+footer {
+      background-color: rgb(228, 230, 236);
+      color:#1e3cb8;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 12px; 
+    }
+
+    .mute-button {
+        background-color: transparent;
+        color: #333;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        text-decoration: underline;
+        text-align:right;
+      }
+
+
+.graphs img{
+    max-width:50vw;
+    max-height:50vh;
+}
 
 #map {
     height:auto;
-    min-height:600px;
+    min-height:400px;
     min-width:300px;
     width: 100%;
 }
@@ -173,12 +268,30 @@ main {
 }
 
 .map{
-  padding:0px 100px;
+  padding:0px 20px;
 }
 
-@media screen and (max-width: 500px) {
+.family-image img{ 
+    width:50%;
+    height:50%;
+    max-height: 80vh;
+    max-height:80vw;
+}
+
+@media screen and (max-width: 720px) {
+    html{
+        margin:0;
+        padding:0;
+    }
+    
     main{
         margin:10px;
+    }
+
+    .padded{
+        margin:0;
+        margin-top:10px;
+        margin-bottom:10px;
     }
 
     .paris-marathon{
@@ -201,6 +314,22 @@ main {
         height:auto;
         min-height:600px;
         min-width:300px;
+        width: 100%;
+    }
+    .race-logo img{
+        max-width:90vw;
+    }
+
+
+  } 
+
+
+  @media screen and (max-width: 300px) {
+
+    #map {
+        height:auto;
+        min-height:500px;
+        min-width:200px;
         width: 100%;
     }
 

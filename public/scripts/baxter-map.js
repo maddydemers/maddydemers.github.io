@@ -1,6 +1,6 @@
 async function loadData() {
     try {
-        const response = await fetch('private/strava.json');
+        const response = await fetch('private/baxter-runs.json');
         if (!response.ok) {
             throw new Error('Failed to fetch data');
         }
@@ -11,7 +11,7 @@ async function loadData() {
   }
 
   // Initialize Leaflet map
-  var map = L.map('map').setView([42.3736, -71.1097], 3);
+  var map = L.map('map').setView([42.3736, -60.1097], 3);
 
   // Add base tile layer
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -21,7 +21,7 @@ async function loadData() {
 
   // Initialize marker cluster group
   var markers = L.markerClusterGroup({
-    maxClusterRadius: 15 // Adjust this value as needed
+    maxClusterRadius: 40 // Adjust this value as needed
 });
 
 
@@ -35,7 +35,7 @@ async function loadData() {
                   var lng = latLngArray[1];
                   var latlng = [lat, lng];
 
-                  var type = data.type[key];
+                  var name = data.name[key];
                   var dist = parseFloat(data.distance_mi[key]).toFixed(2);
                   var vert = parseFloat(data.total_elevation_gain_ft[key]).toFixed(0);
                   var year = data.year[key];
@@ -43,7 +43,7 @@ async function loadData() {
 
                   // Create marker
                   var marker = L.marker(latlng)
-                      .bindPopup("<b>" + type + "</b><br>Distance: " + dist + " mi" + "<br>Elevation Gain: " + vert + " ft")
+                      .bindPopup("<b>" + name + "</b><br>Distance: " + dist + " mi" + "<br>Elevation Gain: " + vert + " ft")
                       .addTo(markers);
               }
           }

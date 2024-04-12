@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadingText = document.querySelector('.loading-text');
 
     function simulateLoading() {
-        let countdown = 0.2;
-        // let countdown = 26.2;
+        //let countdown = 0.2;
+        let countdown = 26.2;
         const interval = setInterval(function() {
             countdown -= 0.1;
             progressBar.style.width = (100 - countdown / 26.2 * 100) + '%';
@@ -51,3 +51,14 @@ function showScene(sceneId) {
     document.getElementById(sceneId).style.display = 'block';
 }
 
+function toggleMute() {
+  var audio = document.getElementById('background-audio');
+  var muteButton = document.querySelector('.mute-button');
+  if (audio.muted) {
+    audio.muted = false;
+    muteButton.innerHTML = '<i class="fas fa-volume-up"></i><span> Mute</span>';
+  } else {
+    audio.muted = true;
+    muteButton.innerHTML = '<i class="fas fa-volume-mute"></i><span> Unmute</span>';
+  }
+}
