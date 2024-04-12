@@ -197,6 +197,7 @@ h3{
   }
 .go{
     display:flex;
+    flex-direction:column;
     justify-content:center;
     font-size:xx-large;
     text-align:center;
@@ -204,6 +205,10 @@ h3{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.go p{
+    font-size:small;
 }
 
 .next-btn, #start-btn, #motivation, #go-btn {
@@ -280,12 +285,17 @@ footer {
   padding:0px 20px;
 }
 
-.family-image img{ 
+.after-image img{ 
     width:50%;
-    height:50%;
-    max-height: 80vh;
+    height:20%;
+    max-height: 30vh;
     max-height:80vw;
 }
+
+figcaption {
+        text-align: center;
+        font-style: italic;
+    }
 
 @media screen and (max-width: 720px) {
     html{

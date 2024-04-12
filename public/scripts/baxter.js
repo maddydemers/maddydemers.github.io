@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('background-audio');
     const muteButton = document.querySelector('.mute-button');
 
+    // Set audio start time to 24 seconds
+    audio.currentTime = 24;
+
     function simulateLoading() {
         let countdown = 26.2;
         const interval = setInterval(function() {
@@ -19,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show the mute/unmute button when loading completes
                 muteButton.style.display = 'inline-block';
             }
-        }, 50); 
+        }, 25); 
     }
 
     simulateLoading();
@@ -27,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('start-btn').addEventListener('click', function() {
         document.getElementById('welcome-scene').style.display = 'none';
         showScene('scene1');
+
+        if (audio.paused) {
+            audio.currentTime = 60;
+        }
     });
 
     document.querySelectorAll('.next-btn').forEach(btn => {
@@ -65,3 +72,13 @@ function toggleMute() {
         muteButton.innerHTML = '<i class="fas fa-volume-mute"></i><span> Unmute</span>';
     }
 }
+
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+        // Tab is visible
+        unmuteAudio();
+    } else {
+        // Tab is hidden
+        muteAudio();
+    }
+});
