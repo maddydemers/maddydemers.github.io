@@ -160,6 +160,22 @@ main {
     padding-right:20px;
 }
 
+
+#map {
+    height:auto;
+    min-height:600px;
+    min-width:300px;
+    width: 100%;
+}
+
+#map-id p{
+  margin:0;
+}
+
+.map{
+  padding:0px 100px;
+}
+
 @media screen and (max-width: 500px) {
     main{
         margin:10px;
@@ -179,6 +195,13 @@ main {
     .paris{
         padding-bottom:10px;
         padding-right:0px;
+    }
+
+    #map {
+        height:auto;
+        min-height:600px;
+        min-width:300px;
+        width: 100%;
     }
 
   } 
