@@ -110,7 +110,7 @@ main {
     }
   }
   
-  #start-btn, #motivation {
+  #start-btn, #motivation, #go-btn {
     animation: pulse 1.5s infinite alternate;
   }
 
@@ -119,7 +119,7 @@ main {
     color: #1e3cb8;
 }
 
-#start-btn{
+#start-btn, #go-btn{
     font-size:larger;
 }
 
@@ -195,9 +195,18 @@ h3{
       transform: translateX(-50px) ; 
     }
   }
+.go{
+    display:flex;
+    justify-content:center;
+    font-size:xx-large;
+    text-align:center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-
-.next-btn, #start-btn, #motivation {
+.next-btn, #start-btn, #motivation, #go-btn {
     padding: 10px 20px;
     font-size: larger;
     cursor: pointer;
@@ -211,7 +220,7 @@ h3{
     margin-top:20px;
 }
 
-.next-btn:hover, #start-btn:hover, #motivation:hover{
+.next-btn:hover, #start-btn:hover, #motivation:hover, #go-btn:hover{
     background-color: #f0d513; 
     color: #1e3cb8; 
 }
